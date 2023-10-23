@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarniT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="img/logosp.png" width="160" height="70" alt="">
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="plans.html">PLANS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+            </ul>
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+	</header>
+
+    <section class="register">
+        <div class="signup">
+            <div class="regtitle">
+                <h1>SIGN<span> UP </span></h1>
+            </div>
+                <form class="reg" id="regform">
+                    <input id="nom" type="text" placeholder="Nom">
+                    <span id="nomError" class="error-message"></span>
+                    <input id="prenom" type="text" placeholder="Prenom">
+                    <span id="prenomError" class="error-message"></span>
+                    <input id="cin" type="text" placeholder="CIN">
+                    <span id="cinError" class="error-message"></span>
+                    <input id="email" type="text" placeholder="exemple@gmail.com">
+                    <span id="emailError" class="error-message"></span>
+                    <input id="phone" type="text" placeholder="ex. +212 6 12 48 79 56">
+                    <span id="phoneError" class="error-message"></span>
+                    <select id="plan">
+                        <option selected disabled>Choose a plan</option>
+                        <option>ONE DAY PASS</option>
+                        <option>MONTHLY PASS</option>
+                        <option>YEARLY PASS</option>
+                    </select>
+                    <span id="planError" class="error-message"></span>
+                    <button class="regbtn" type="submit">REGISTER</button>
+                    <br>
+                </form>
+                
+        </div>
+    </section>
+
+    <footer class="f">
+        <div class="foot">
+            <div class="infoicn">
+                <img src="img/accueil.png" alt="">
+                <img src="img/appeler.png" alt="">
+                <img src="img/time-and-date.png" alt="">
+            </div>
+            <div class="info">
+                <span>
+                    <br>
+                    178 West 27th Street, Suite 527,
+                    New York NY 10012, United States
+                </span>
+                <span>
+                    +1 587 548 9401
+                    <br>
+                    +1 945 354 2154
+                </span>
+                <span>
+                    <ul>
+                        <li>
+                            Every day: 9:00 - 22:00
+                        </li>
+                        <li>
+                            Sat - Sun: 8:00 - 21:00
+                        </li>
+                    </ul>
+                    <br>
+                </span>
+            </div>	
+        </div>
+        <div class="contact">
+            <span class="titre">Contact Us</span>
+            <input id="fullname" type="text" placeholder="Fullname">
+            <span id="fullnameError" class="error-message"></span>
+            <input id="mail" type="email" placeholder="Enter your email">
+            <span id="mailError" class="error-message"></span>
+            <textarea id="message" cols="20" rows="3" placeholder="Message"></textarea>
+            <span id="messageError" class="error-message"></span>
+            <a href="#" class="sub" id="submit-button">Submit</a>
+            <br>
+            <div class="copy">
+                <span>All rights are reserved © EarniT 2023</span>
+            </div>
+        </div>
+        
+    
+        
+    </footer>
+    <script src="js/script.js"></script>
+    
+    </body>
+    
+    </html>
