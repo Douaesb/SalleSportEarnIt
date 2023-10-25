@@ -136,7 +136,7 @@ document.getElementById('regform').addEventListener('submit', function (e) {
 
     const nomRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]{3,}$/;
     const prenomRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]{3,}$/;
-    const cinRegex = /^HH[0-9]{5}$/;
+    const cinRegex = /^HH[0-9]{6}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const numberRegex = /^\+212[0-9]{9}$/;
 
@@ -147,7 +147,7 @@ document.getElementById('regform').addEventListener('submit', function (e) {
         const errorElement = document.getElementById(id + "Error");
         errorElement.textContent = message;
         errorElement.style.color = "red";
-        errorElement.style.width = "50%";
+        // errorElement.style.width = "50%";
 
     }
 
