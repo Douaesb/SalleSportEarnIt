@@ -136,9 +136,10 @@ document.getElementById('regform').addEventListener('submit', function (e) {
 
     const nomRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]{3,}$/;
     const prenomRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]{3,}$/;
-    const cinRegex = /^HH[0-9]{6}$/;
+    const cinRegex = /^[A-Za-z]{1,2}\d{5,6}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const numberRegex = /^\+212[0-9]{9}$/;
+    const numberRegex =/^\+212[6|7][0-9]{8}$/;
+
 
     const errors = {};
 
@@ -168,7 +169,7 @@ document.getElementById('regform').addEventListener('submit', function (e) {
         clearError("prenom");
     }
     if (!cin.match(cinRegex)) {
-        displayError("cin", "CIN should start with a letter and be followed by 6 digits.");
+        displayError("cin", "CIN should start with a letter or two and be followed by 5 or 6 digits.");
     } else {
         clearError("cin");
     }
@@ -178,7 +179,7 @@ document.getElementById('regform').addEventListener('submit', function (e) {
         clearError("email");
     }
     if (!telephone.match(numberRegex)) {
-        displayError("phone", "Le numéro de téléphone doit commencer par +212 suivi de 9 chiffres.");
+        displayError("phone", "Le numéro de téléphone doit commencer par +212 suivi de 6 ou 7 suivi de 8 chiffres.");
     } else {
         clearError("phone");
     }
@@ -190,6 +191,9 @@ document.getElementById('regform').addEventListener('submit', function (e) {
 
     if (Object.keys(errors).length > 0) {
         e.preventDefault(); // Prevent form submission if there are errors
+    }
+    if (Object.keys(errors).length === 0) {
+        alert("Registration successfull!"); // You can replace this with your desired action
     }
 });
 

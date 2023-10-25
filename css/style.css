@@ -837,6 +837,12 @@ span.viewmore {
 
 
 @media(min-width: 1024px) {
+	.plans {
+		width: 100%;
+		height: fit-content;
+		background-image: url(../img/sb2.jpg);
+		background-size: cover;
+	}
 	.pass {
 		/* height: 65vh; */
 		height: fit-content;
